@@ -1,0 +1,27 @@
+<p>user works!</p>
+<p> Date (variable) : {{dateService.date | date:"long"}}</p>
+<p> Date (methode) : {{dateService.getDate() | date:"long"}}</p>
+<br>
+<br>
+<input [(ngModel)]='userInput'>
+<p>Test : {{userInput}}</p>
+
+
+<input [formControl]="loginInput">
+<p>Test : {{loginInput.value}}</p>
+
+
+<form [formGroup]="loginForm">
+  <label for="name">
+  <input formControlName="username">
+  username
+</label>
+<br>
+<label for="email">
+  <input formControlName="email">
+  email
+</label>
+<br>
+<button (click)="onSubmit()">Envoyer</button>
+
+</form>
